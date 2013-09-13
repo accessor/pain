@@ -7,7 +7,7 @@
   <div class='property-details clr'>
     <div class='row'>
       <div class='large-7 columns title'><%= property.title %></div>
-      <div class='large-5 columns'>Posted on: <span class='fwb sfs text-right'><%= property.created_at.to_datetime %></span></div>
+      <div class='large-5 columns text-right'>Posted on: <span class='fwb sfs text-right'><%= property.created_at.to_s(:long) %></span></div>
     </div>
     <div class='row p-image'>
       <%= image_tag property.image.image.url(:thumb) %>
