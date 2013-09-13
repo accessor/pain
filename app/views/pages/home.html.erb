@@ -1,0 +1,24 @@
+<div class='row'>
+  <div class='large-6 columns'>
+  	<fieldset>
+  		<legend>Search</legend>
+  		<div class='row'>
+  		  <div class='small-6 columns'><%= select_tag 'property_type', '<option>Select Category</option>'.html_safe %></div>
+  		  <div class='small-6 columns'><%= select_tag 'city', '<option>Select City</option>'.html_safe %></div>
+  		</div>
+  		<div class="row">
+  	    <div class='small-6 columns'><%= select_tag 'min_price', '<option>Min Price</option>'.html_safe %></div>
+  		  <div class='small-6 columns'><%= select_tag 'max_price', '<option>Max Price</option>'.html_safe %></div>
+  		</div>
+  	</fieldset>
+  </div>
+  <div class='large-6 columns'>
+		<div id="banner-fade">
+		  <ul class="bjqs">
+		    <li><%= image_tag('banner1.png') %></li>
+		    <li><%= image_tag('banner2.jpg') %></li>
+		    <li><%= image_tag('banner1.png') %></li>
+		  </ul>
+		</div>
+	</div>
+</div>

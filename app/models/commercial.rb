@@ -1,0 +1,2 @@
+class Commercial < Property
+end

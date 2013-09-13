@@ -1,0 +1,17 @@
+---
+banner1.png: banner1.png
+banner1/index.png: banner1.png
+banner2.jpg: banner2.jpg
+banner2/index.jpg: banner2.jpg
+logo.png: logo.png
+logo/index.png: logo.png
+application.js: application.js
+application/index.js: application.js
+application.css: application.css
+application/index.css: application.css
+jquery.min.map: jquery.min.map
+jquery/index.min.map: jquery.min.map
+vendor/custom.modernizr.js: vendor/custom.modernizr.js
+vendor/custom/index.modernizr.js: vendor/custom.modernizr.js
+vendor/zepto.js: vendor/zepto.js
+vendor/zepto/index.js: vendor/zepto.js

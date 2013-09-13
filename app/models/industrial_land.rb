@@ -1,0 +1,2 @@
+class IndustrialLand < Commercial
+end

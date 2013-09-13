@@ -1,0 +1,14 @@
+#sign-in{
+  .inline-block{
+    display:inline-block;
+  }
+  .remember-password{
+    padding-bottom:2px;
+  }
+}
+
+#sign-in,#sign-out{
+	label{
+    font-weight:bold;
+  }
+}

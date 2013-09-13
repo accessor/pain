@@ -1,0 +1,2 @@
+class IndependentHouse < Residential
+end

@@ -1,0 +1,2 @@
+class Villa < Residential
+end

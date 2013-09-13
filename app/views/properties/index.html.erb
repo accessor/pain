@@ -1,0 +1,36 @@
+<%= link_to 'Sell Property', new_independent_house_path  %>
+
+<h3><%= "Listing #{params[:type].underscore.pluralize.titlecase}" %></h3>
+<div class='property-list'>
+<%= paginate @properties %>
+<% @properties.each do |property| %>
+  <div class='property-details clr'>
+    <div class='row'>
+      <div class='large-7 columns title'><%= property.title %></div>
+      <div class='large-5 columns'>Posted on: <span class='fwb sfs text-right'><%= property.created_at.to_datetime %></span></div>
+    </div>
+    <div class='row p-image'>
+      <%= image_tag property.image.image.url(:thumb) %>
+    </div>
+    <div class='p-detail'>
+      <div class='desc row pb10'>
+        <div class='large-12 columns'><%= truncate property.description, :length => 300 %></div>
+      </div>
+      <div class='row pb5'>
+        <div class='large-3 columns'>Built-up Area:</div>
+        <div class='large-9 columns fwb'><%= property.dimensions %></div>
+      </div>
+      <div class='row pb10'>
+        <div class='large-3 columns'>Price:</div>
+        <div class='large-9 columns fwb sfs'><%= property.price %></div>
+      </div>
+      <div class='row'>
+        <div class='large-12 columns'>
+          <%= link_to 'Show Details', property_path(property), :class => 'small button' %> 
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='clr'></div>
+<% end %>
+</div>
