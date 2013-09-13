@@ -9,4 +9,14 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
   # attr_accessible :title, :body
   has_many :properties
+  serialize :roles, Array
+  ROLES = %w[admin moderator author banned]
+
+  def roles
+  	self[:roles] ||= []
+  end
+
+  def is?(role)
+  	roles.include?(role.to_s)
+  end
 end

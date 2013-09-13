@@ -1,4 +1,4 @@
-<%= link_to 'Sell Property', new_independent_house_path  %>
+<%= link_to 'Sell Property', new_independent_house_path if can? :create, Property  %>
 
 <h3><%= "Listing #{params[:type].underscore.pluralize.titlecase}" %></h3>
 <div class='property-list'>
