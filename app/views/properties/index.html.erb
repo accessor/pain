@@ -1,5 +1,10 @@
-<%= link_to 'Sell Property', new_independent_house_path if can? :create, Property  %>
-
+<div class='row'>
+  <div class='large-6 columns'>
+    <%= link_to 'Sell Property', new_independent_house_path if can? :create, Property  %>
+  </div>
+  <div class='6-large columns'>
+  </div>
+</div>
 <h3><%= "Listing #{params[:type].underscore.pluralize.titlecase}" %></h3>
 <div class='property-list'>
 <%= paginate @properties %>

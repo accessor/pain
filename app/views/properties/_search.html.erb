@@ -1,0 +1,9 @@
+<%= form_tag properties_path, {:method => :get, :name => :q} do %>
+  <%= label_tag 'q[title_cont]', 'Title' %>
+  <%= text_field_tag 'q[title_cont]' %>
+  <%= label_tag 'q[created_at_gteq]', 'Posted from' %>
+  <%= text_field_tag 'q[created_at_gteq]' %>
+  <%= label_tag 'q[created_at_lteq]', 'Posted to' %>
+  <%= text_field_tag 'q[created_at_lteq]' %>
+  <%= submit_tag 'Search' %>
+<% end %>
