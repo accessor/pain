@@ -30,7 +30,10 @@ end
 gem 'jquery-rails'
 gem 'execjs'
 gem 'therubyracer'
-gem 'rails_12factor', group: :production
+group :production do
+  gem 'rails_12factor'
+  gem 'passenger'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -45,4 +48,9 @@ gem 'rails_12factor', group: :production
 # gem 'capistrano'
 
 # To use debugger
-# gem 'debugger'
+group :development do
+  gem 'debugger'
+  gem 'pry-rails'
+  gem 'pry-plus'
+  gem 'hirb'
+end
