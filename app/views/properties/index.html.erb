@@ -10,26 +10,40 @@
     <div class='property-details clr'>
       <div class='row'>
         <div class='large-7 columns title'><%= property.title %></div>
-        <div class='large-5 columns text-right'>Posted on: <span class='fwb sfs text-right'><%= property.created_at.to_s(:long) %></span></div>
+        <div class='large-5 columns fwb p-code text-right'>#<%= property.code %></div>
       </div>
       <div class='row p-image'>
         <%= image_tag property.image.image.url(:thumb) %>
       </div>
       <div class='p-detail'>
-        <div class='desc row pb10'>
+        <div class='desc row'>
           <div class='large-12 columns'><%= truncate property.description, :length => 300 %></div>
         </div>
-        <div class='row pb5'>
-          <div class='large-3 columns'>Built-up Area:</div>
-          <div class='large-9 columns fwb'><%= property.dimensions %></div>
-        </div>
-        <div class='row pb10'>
-          <div class='large-3 columns'>Price:</div>
-          <div class='large-9 columns fwb sfs'><%= property.price %></div>
+        <div class='row'>
+          <div class='large-2 columns fwb pb5'>Built-up Area:</div>
+          <div class='large-10 columns'><%= property.dimensions %></div>
         </div>
         <div class='row'>
-          <div class='large-12 columns'>
-            <%= link_to 'Show Details', property_path(property), :class => 'small button' %> 
+          <div class='large-2 columns fwb pb5'>Price:</div>
+          <div class='large-10 columns'><%= property.price %></div>
+        </div>
+        <% amenities = property.amenities %>
+        <% if amenities.present? %>
+          <div class='row'>
+            <div class='amenities-title large-2 columns fwb'>Amenities:</div>
+            <div class='large-10 columns'>
+              <ul class='inline-list'>
+                <% amenities.each do |am| %>
+                  <li><%= am %></li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+        <% end %>
+        <div class='row'>
+          <div class='large-2 columns'><%= link_to 'Show Details', property_path(property), :class => 'small button' %></div>
+          <div class='large-10 columns text-right'>
+            <%= property.created_at.to_s(:long) %>
           </div>
         </div>
       </div>

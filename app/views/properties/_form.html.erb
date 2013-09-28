@@ -33,6 +33,10 @@
       <%= image.file_field :image %>
     </div>
   <% end %>
+  <div class="field">
+    <%= f.label :amenity_list, 'Amenities (Seperated by commas)' %>
+    <%= f.text_field :amenity_list %>
+  </div>
   
   <h3>Address Details</h3>
   <%= f.fields_for :address do |address| %>

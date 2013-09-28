@@ -11240,10 +11240,11 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 /* line 28, ../../app/assets/stylesheets/properties.css.scss */
 #property-index .property-list .property-details .p-detail .desc {
+  font-size: -1em;
   padding-bottom: 15px;
   line-height: 18px;
 }
-/* line 35, ../../app/assets/stylesheets/properties.css.scss */
+/* line 36, ../../app/assets/stylesheets/properties.css.scss */
 #property-index .sell-property-link {
   width: 100% !important;
 }
