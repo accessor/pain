@@ -5,6 +5,9 @@ Pain::Application.routes.draw do
 
   get "pages/about_us"
 
+  get "users/your_account"
+  get "users/your_ads"
+
   devise_for :users
 
   resources :properties, :controller => :properties, :type => 'Property'

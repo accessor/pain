@@ -5,7 +5,7 @@ class PropertiesController < ApplicationController
   # GET /properties
   # GET /properties.json
   def index
-    @properties = property_type.search(params[:q]).result.page(params[:page]).per(5)
+    @properties = property_type.search(params[:q]).result.order('created_at desc').page(params[:page]).per(5)
 
     respond_to do |format|
       format.html # index.html.erb

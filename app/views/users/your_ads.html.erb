@@ -1,0 +1,24 @@
+<%= render 'sections' %>
+<div>
+  <% if @ads.blank? %>
+    <p>You haven't posted ads. Please click here to post an ad</p>
+  <% else %>
+    <table>
+      <tr>
+        <th>Code</th>
+        <th>Title</th>
+        <th>Posted On</th>
+        <th>Status</th>
+        <th></th>
+      </tr>
+      <% @ads.each do |ad| %>
+        <tr>
+          <td><%= ad.code %></td>
+          <td><%= ad.title %></td>
+          <td><%= ad.created_at.to_s(:long) %></td>
+          <td><%= ad.status %></td>
+        </tr>
+      <% end %>
+    </table>
+  <% end %>
+</div>

@@ -3,14 +3,15 @@
 	  <div class='large-5 columns'>
 			<fieldset>
 			<h3>Sign in</h3>
+			<p class="error-messages"><%= alert %></p>
 			<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 			  <div>
 			    <%= f.label :email %>
-			    <%= f.email_field :email, :autofocus => true %>
+			    <%= f.email_field :email, :autofocus => true, :required => true %>
 			  </div>
 
 			  <div><%= f.label :password %>
-			  <%= f.password_field :password %></div>
+			  <%= f.password_field :password, :required => true %></div>
 
 			  <% if devise_mapping.rememberable? -%>
 			    <div class='remember-password'>

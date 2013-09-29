@@ -1,5 +1,5 @@
 class Property < ActiveRecord::Base
-  attr_accessible  :title, :description, :dimensions, :price, :status, :expiry_date, :address_attributes, :image_attributes, :amenity_list
+  attr_accessible  :title, :description, :dimensions, :price, :address_attributes, :image_attributes, :amenity_list
   belongs_to :user
   belongs_to :address, dependent: :destroy
   belongs_to :image, dependent: :destroy

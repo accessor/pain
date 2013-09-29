@@ -1,7 +1,7 @@
-<%= form_tag properties_path, {:method => :get, :name => :q} do %>
+<%= form_tag properties_path, {:method => :get, :name => :q, :class=> 'custom'} do %>
   <div class='pb10'>
     <%= label_tag 'q[type]', 'Property Type' %>
-    <%= select_tag 'q[type_eq]', options_for_select([['Apartments', 'Apartment'],['Independent Houses', 'IndependentHouse'], ['Villas', 'Villa']]) %>
+    <%= select_tag 'q[type_eq]', options_for_select([['Apartments', 'Apartment'],['Independent Houses', 'IndependentHouse'], ['Villas', 'Villa']]), :id => 'customDropdown' %>
   </div>
   <%= label_tag 'q[address_city_eq]', 'City' %>
   <%= text_field_tag 'q[address_city_eq]' %>

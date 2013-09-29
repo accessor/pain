@@ -1,0 +1,8 @@
+<div class="section-container auto" data-section>
+  <section class='<%= "active" if action_name == "your_account" %>'>
+    <p class="title" data-section-title><%= link_to 'Your Account', users_your_account_path %></p>
+  </section>
+  <section class='<%= "active" if action_name == "your_ads" %>'>
+    <p class="title" data-section-title><%= link_to 'Your Ads', users_your_ads_path %></p>
+  </section>
+</div>

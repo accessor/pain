@@ -216,6 +216,7 @@ DEPENDENCIES
   hirb
   jquery-rails
   kaminari
+  mail
   paperclip (~> 3.0)
   passenger
   pg

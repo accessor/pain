@@ -1043,6 +1043,10 @@
 }
 
 a:hover:not(.button), a:focus:not(.button){
+  background: none !important;
+}
+
+/*a:hover:not(.button), a:focus:not(.button){
   text-decoration:underline !important;
   color: #000000 !important;
   background-color: white !important;

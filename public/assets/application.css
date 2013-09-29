@@ -5574,6 +5574,11 @@ body {
 .pb10 {
   padding-bottom: 10px;
 }
+
+/* line 33, ../../app/assets/stylesheets/application.scss */
+#error_explanation {
+  display: none;
+}
 /* line 4, ../../../../../.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.0.9/scss/foundation/components/_global.scss */
 *,
 *:before,
@@ -11151,37 +11156,31 @@ table tfoot tr td {
   padding-top: 5px;
 }
 
-/* line 1045, ../../app/assets/stylesheets/foundation_and_overrides.scss */
-a:hover:not(.button), a:focus:not(.button) {
-  text-decoration: underline !important;
+/*a:hover:not(.button), a:focus:not(.button){
+  text-decoration:underline !important;
   color: #000000 !important;
   background-color: white !important;
 }
 
-/* line 1051, ../../app/assets/stylesheets/foundation_and_overrides.scss */
-a.button {
-  color: #ffffff !important;
+a.button{
+	color:#ffffff !important;
 }
 
-/* line 1055, ../../app/assets/stylesheets/foundation_and_overrides.scss */
 .top-bar-section li a:not(.button) {
-  color: #ffffff !important;
-  background: none repeat scroll 0 0 #111111 !important;
-  line-height: 45px;
-  padding: 0 15px;
+	color: #ffffff !important;
+    background: none repeat scroll 0 0 #111111 !important;
+    line-height: 45px;
+    padding: 0 15px;
 }
-
-/* line 1061, ../../app/assets/stylesheets/foundation_and_overrides.scss */
 .top-bar-section li a:not(.button):hover {
-  background: none repeat scroll 0 0 #000000 !important;
-  text-decoration: none !important;
+    background: none repeat scroll 0 0 #000000 !important;
+    text-decoration: none !important;
 }
 
-/* line 1066, ../../app/assets/stylesheets/foundation_and_overrides.scss */
 .top-bar-section li a:not(.button):focus {
-  text-decoration: none !important;
+    text-decoration: none !important;
 }
-
+*/
 /*
 button, .button {
     background-color: #6B6B60 !important;
