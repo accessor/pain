@@ -2,9 +2,7 @@ class UsersController < ApplicationController
 	before_filter :authenticate_user!
 
 	def your_account
-	end
-
-	def profile
+		@user = current_user
 	end
 
 	def your_ads

@@ -1,1 +1,19 @@
 <%= render 'sections' %>
+<div class='row'>
+  <div class='large-2 columns fwb'>Email :</div>
+  <div class='large-3 columns'><%= @user.email %></div>
+  <div class='large-7 columns'></div>
+</div>
+<div class='row'>
+  <div class='large-2 columns fwb'>Last Singed In : </div>
+  <div class='large-3 columns'><%= @user.last_sign_in_at.to_s(:long) %></div>
+  <div class='large-7 columns'></div>
+</div>
+<div class='row'>
+  <div class='large-2 columns'></div>
+  <div class='large-2 columns'></div>
+</div>
+<div class='row'>
+  <div class='large-2 columns'></div>
+  <div class='large-2 columns'></div>
+</div>

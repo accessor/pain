@@ -42,58 +42,67 @@
 		      </div>
 			  </div>
 			  <div class='nav-menu'>
-				  <nav class="top-bar">
+					<nav class="top-bar">
 					  <ul class="title-area">
-					    <li class="name"></li>
+					    <!-- Title Area -->
+					    <li class="name">
+					    </li>
+					    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+					    <li class="toggle-topbar"><a href="#"><span>Menu</span></a></li>
 					  </ul>
+
 					  <section class="top-bar-section">
+					    <!-- Left Nav Section -->
 					    <ul class="left">
-					 <!--      <li class="divider"></li>
+					      <li class="divider"></li>
+					      <li class="active"><%= link_to 'Home', root_path %></li>
+					      <li class="divider"></li>
 					      <li class="has-dropdown"><a href="#">Residential</a>
-					        <ul>
-					          <li><a href="#">Independent House</a></li>
-					          <li><a href="#">Flats</a></li>
-					          <li><a href="#">Villas</a></li>
-					          <li><a href="#">Plots</a></li>
-					        </ul>
+					        <ul class="dropdown">
+					          <!-- <li><label>Dropdown Level 2 Label</label></li> -->
+						        <li class><a href="#">Apartments</a></li>
+							      <li><%= link_to 'Houses', independent_houses_path %></li>
+							      <li><%= link_to 'Villas', villas_path %></li>
+							      <li><%= link_to 'Plots', plots_path %></li>
+							      <li class="divider"></li>
+                                  <li><a href="#">See all &rarr;</a></li>
+						      </ul>
 					      </li>
 					      <li class="divider"></li>
 					      <li class="has-dropdown"><a href="#">Commercial</a>
-									<ul>
-										<li><a href="#">Show Rooms</a></li>
-										<li><a href="#">Office Spaces</a></li>
-										<li><a href="#">Resturants</a></li>
-										<li><a href="#">Industrial Lands</a></li>
-										<li><a href="#">Agricultural Lands</a></li>
-										<li><a href="#">Service Apartments</a></li>
-									</ul>
+					        <ul class="dropdown">
+					          <li><a href="#">Office Space</a></li>
+						      <li><a href="#">Show rooms</a></li>
+						      <li><a href="#">Service Apartments</a></li>
+						      <li><a href="#">Hotel</a></li>
+						      <li><a href="#">Industrial Land</a></li>
+						      <li><a href="#">Agricultural Land</a></li>
+						      <li><a href="#">Resorts</a></li>
+						      <li class="divider"></li>
+	                          <li><a href="#">See all &rarr;</a></li>
+						    </ul>
 					      </li>
-					      <li class="divider"></li> -->
-					      <li class="divider"></li>
-					      <li><%= link_to 'Home', root_path %></li>
-					      <li class="divider"></li>
-					      <li class><a href="#">Apartments</a></li>
-					      <li class="divider"></li>
-					      <li><%= link_to 'Houses', independent_houses_path %></li>
-					      <li class="divider"></li>
-					      <li><%= link_to 'Villas', villas_path %></li>
-					      <li class="divider"></li>
-					      <li><%= link_to 'Plots', plots_path %></li>
-					      <li class="divider"></li>
-					      <li><a href="#">Office Space</a></li>
-					      <li class="divider"></li>
-					      <li><a href="#">Show rooms</a></li>
-					      <li class="divider"></li>
-					      <li><a href="#">Hotel</a></li>
-					      <li class="divider"></li>
-					      <li><a href="#">Industrial Land</a></li>
-					      <li class="divider"></li>
-					      <li><a href="#">Agricultural Land</a></li>
-					      <li class="divider"></li>
-					      <li><a href="#">Resort / Service Apartments</a></li>
 					    </ul>
-				    </section>
-				  </nav>
+
+
+					    <!-- Right Nav Section -->
+					    <ul class="right">
+					      <li class="divider"></li>
+					      <% if user_signed_in? %>
+						      <li class="has-dropdown"><a href="#">Welcome <%= truncate(current_user.email, :length => 15) %></a>
+						        <ul class="dropdown">
+						          <!-- <li><label>Dropdown Level 2 Label</label></li> -->
+							        <li class><%= link_to 'Your Account', users_your_account_path %></li>
+								      <li><%= link_to 'Your Ads', users_your_ads_path %></li>
+							      </ul>
+						      </li>
+						    <% else %>
+						      <li><a href="#">Welcome Guest</a></li>
+						    <% end %>
+						    <li class="divider"></li>
+					    </ul>
+					  </section>
+					</nav>
 				</div>
 		  </div>
 	    <%= yield %>

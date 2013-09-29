@@ -1014,7 +1014,7 @@
 .page{
   margin: 0 auto;
   max-width:100%;
-  width: 85%;
+  width: 80%;
 }
 
 .top-links{
@@ -1042,8 +1042,24 @@
   padding-top:5px;
 }
 
-a:hover:not(.button), a:focus:not(.button){
+span > a:hover:not(.button), span > a:focus:not(.button){
   background: none !important;
+}
+
+div > a:hover:not(.button), div > a:focus:not(.button){
+  background: none !important;
+}
+
+p > a:hover:not(.button), p > a:focus:not(.button){
+  background: none !important;
+}
+
+a.button{
+  color: #ffffff !important;
+}
+
+.links a{
+  color: #222222 !important;
 }
 
 /*a:hover:not(.button), a:focus:not(.button){
@@ -1070,6 +1086,7 @@ a.button{
 .top-bar-section li a:not(.button):focus {
     text-decoration: none !important;
 }
+*/
 /*
 button, .button {
     background-color: #6B6B60 !important;
