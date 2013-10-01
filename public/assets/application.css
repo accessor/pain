@@ -11183,7 +11183,7 @@ a.button {
 
 /* line 1061, ../../app/assets/stylesheets/foundation_and_overrides.scss */
 .links a {
-  color: #111111 !important;
+  color: #222222 !important;
 }
 
 /*a:hover:not(.button), a:focus:not(.button){
@@ -11210,6 +11210,7 @@ a.button{
 .top-bar-section li a:not(.button):focus {
     text-decoration: none !important;
 }
+*/
 /*
 button, .button {
     background-color: #6B6B60 !important;
@@ -11237,6 +11238,37 @@ button:hover, button:focus, .button:hover, .button:focus {
 	border-style: none outset;
 }
 */
+/* line 1, ../../app/assets/stylesheets/gmaps4rails.css.scss */
+.map_container {
+  padding: 6px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ccc #ccc #999 #ccc;
+  -webkit-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
+  -moz-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
+  box-shadow: rgba(64, 64, 64, 0.1) 0 2px 5px;
+  width: 814px;
+}
+/* line 10, ../../app/assets/stylesheets/gmaps4rails.css.scss */
+.map_container img {
+  max-width: none;
+}
+
+/* line 13, ../../app/assets/stylesheets/gmaps4rails.css.scss */
+.gmaps4rails_map {
+  width: 800px;
+  height: 400px;
+}
+
+/* line 18, ../../app/assets/stylesheets/gmaps4rails.css.scss */
+.bing_map {
+  position: absolute;
+  top: 20;
+  left: 10;
+  width: 400px;
+  height: 400px;
+  border: #555555 2px solid;
+}
 /* line 6, ../../app/assets/stylesheets/properties.css.scss */
 #property-index .property-list .clr {
   clear: both;

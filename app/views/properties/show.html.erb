@@ -20,6 +20,8 @@
   <%= @property.price %>
 </p>
 
+<%= gmaps4rails(@gmap_json) %>
+
 
 <%= link_to 'Edit', edit_property_path(@property) %> |
 <%= link_to 'Back', properties_path %>

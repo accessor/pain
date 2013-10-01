@@ -7,7 +7,7 @@ class Property < ActiveRecord::Base
   accepts_nested_attributes_for :image
   before_create :assign_user, :generate_code
   acts_as_taggable_on :amenities
-
+  monetize :price_cents, as: :price
   private
     def assign_user
       self.user = current_user

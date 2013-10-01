@@ -17,6 +17,8 @@ class PropertiesController < ApplicationController
   # GET /properties/1.json
   def show
     @property = property_type.find(params[:id])
+    @address = @property.address
+    @gmap_json = @address.to_gmaps4rails
 
     respond_to do |format|
       format.html # show.html.erb
