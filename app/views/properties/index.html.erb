@@ -1,54 +1,35 @@
 <div id='property-index'>
-  
-  <div class='sell-property-link'>
-    <%= link_to 'Sell Property', new_independent_house_path if can? :create, Property  %>
-  </div>
-  <h3><%= "Listing #{((params[:q] && params[:q][:type_eq])|| params[:type]).underscore.titlecase} Properties" %></h3>
-  <div class='property-list'>
-  <%= paginate @properties %>
-  <% @properties.each do |property| %>
-    <div class='property-details clr'>
-      <div class='row'>
-        <div class='large-7 columns title'><%= property.title %></div>
-        <div class='large-5 columns fwb p-code text-right'>#<%= property.code %></div>
+  <div class='row'>
+    <div class='large-2 columns'>
+      <div class='property-gallery'>
+        <h6>Property Gallery</h6>
       </div>
-      <div class='row p-image'>
-        <%= image_tag property.image.image.url(:thumb) %>
-      </div>
-      <div class='p-detail'>
-        <div class='desc row'>
-          <div class='large-12 columns'><%= truncate property.description, :length => 300 %></div>
-        </div>
-        <div class='row'>
-          <div class='large-2 columns fwb pb5'>Built-up Area:</div>
-          <div class='large-10 columns'><%= property.dimensions %></div>
-        </div>
-        <div class='row'>
-          <div class='large-2 columns fwb pb5'>Price:</div>
-          <div class='large-10 columns'><%= property.price %></div>
-        </div>
-        <% amenities = property.amenities %>
-        <% if amenities.present? %>
-          <div class='row'>
-            <div class='amenities-title large-2 columns fwb'>Amenities:</div>
-            <div class='large-10 columns'>
-              <ul class='inline-list'>
-                <% amenities.each do |am| %>
-                  <li><%= am %></li>
-                <% end %>
-              </ul>
+    </div>
+    <div class='large-10 columns'>
+      <div class='property-list'>
+        <h4><%= "Listing #{((params[:q] && params[:q][:type_eq])|| params[:type]).underscore.titlecase} Properties" %></h4>
+        <%= paginate @properties %>
+        <% @properties.each do |property| %>
+          <div class='property-listing-large property-listing'>
+            <div class='float-left photo col'>
+              <%= image_tag (property.image.present? ? property.image.image.url(:thumb) : 'no_image.jpg') %>
+            </div>
+            <div class='float-left property-info col'>
+              <dl class='float-left col main-data'>
+                <dt class='code'>Code: <%= property.code %></dt>
+                <dt class='property-type'><%= property.type.titlecase %></dt>
+                <dt class='area'><%= property.dimensions %></dt>
+                <dt class='price'><%= property.price.format %></dt>
+              </dl>
+              <dl class='float-left data'>
+                <dt class='code'><%= property.title %></dt>
+                <p><%= truncate property.description, :length => 150 %></p>
+                <dt><%= link_to 'Show Details', property_path(property), :class => 'small button' %></dt>
+              </dl>
             </div>
           </div>
         <% end %>
-        <div class='row'>
-          <div class='large-2 columns'><%= link_to 'Show Details', property_path(property), :class => 'small button' %></div>
-          <div class='large-10 columns text-right'>
-            <%= property.created_at.to_s(:long) %>
-          </div>
-        </div>
       </div>
     </div>
-    <div class='clr'></div>
-  <% end %>
   </div>
 </div>

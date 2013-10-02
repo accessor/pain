@@ -3,45 +3,48 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #property-index{
   .property-list{
-    .clr{
-      clear:both;
+    float:left;
+  }
+  .property-listing-large{
+    display: table;
+    font-size: 0.85em;
+    padding: 10px 12px;
+    .col{
+      padding: 0 12px 0 0;
     }
-  	.property-details{
-  	  float:left;
-      border: 1px solid #D7D7D5;
-      border-radius: 5px 5px 5px 5px;
-      box-shadow: 0 0 5px 1px #DFDFDF;
-      margin: 0 0 15px;
-      padding: 10px;
-      .title{
-        font-size:16px;
-        font-weight:bold;
-        padding:5px 0 10px 0;
-      }
-      .p-code{
-        font-size:0.85em;
-      }
-      .p-image{
-        float:left;
-        width:250px;
-      }
-      .p-detail{
-        float:left;
-        width:800px;
-        font-size: 0.85em;
-        .desc{
-          padding-bottom:15px;
-          line-height:18px;
-        }
-        ul{
-          width:100%;
-          height:100%;
-          display:block;
-        }
-      }
-  	}
   }
-  .sell-property-link{
-    width: 100% !important;
+  .property-listing{
+    background-color: #FFFFFF;
+    border-top: 1px solid #F4F6F7;
+    position: relative;
+    transition: background-color 0.8s ease 0s;
+    width: 100%;
+    .float-left{
+      float: left;
+      overflow: hidden;
+    }
+    .photo img{
+      width:200px;
+      height:150px;
+    }
+    .property-type{
+      color: #990000
+    }
+    .price{
+      font-size: 1.2em;
+    }
+    .main-data{
+      max-width: 160px;
+      overflow: hidden;
+    }
+    .data{
+      width: 400px;
+    }
+    clear:both;
   }
+  .property-gallery{
+    padding: 6px 10px 0 10px;
+    float : left;
+  }
+
 }

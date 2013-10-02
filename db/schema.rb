@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131001181543) do
+ActiveRecord::Schema.define(:version => 20131002174729) do
 
   create_table "addresses", :force => true do |t|
     t.string   "name"
@@ -47,8 +47,8 @@ ActiveRecord::Schema.define(:version => 20131001181543) do
     t.string   "title"
     t.text     "description"
     t.string   "dimensions"
-    t.datetime "created_at",                        :null => false
-    t.datetime "updated_at",                        :null => false
+    t.datetime "created_at",                                     :null => false
+    t.datetime "updated_at",                                     :null => false
     t.string   "status"
     t.datetime "expiry_time"
     t.string   "post_by"
@@ -57,11 +57,14 @@ ActiveRecord::Schema.define(:version => 20131001181543) do
     t.integer  "user_id"
     t.string   "dimensions_unit"
     t.text     "additional_details"
-    t.integer  "price_cents",        :default => 0
+    t.integer  "price_cents",        :limit => 8, :default => 0
     t.float    "latitude"
     t.float    "longitude"
     t.boolean  "gmaps"
   end
+
+  add_index "properties", ["price_cents"], :name => "index_properties_on_price_cents"
+  add_index "properties", ["type"], :name => "index_properties_on_type"
 
   create_table "taggings", :force => true do |t|
     t.integer  "tag_id"
