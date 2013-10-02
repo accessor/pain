@@ -6,6 +6,7 @@ class PropertiesController < ApplicationController
   # GET /properties.json
   def index
     Property.first
+    params[:q] = view_context.convert_price_to_price_cents(params[:q])
     @properties = property_type.search(params[:q]).result.order('created_at desc').page(params[:page]).per(5)
 
     respond_to do |format|
