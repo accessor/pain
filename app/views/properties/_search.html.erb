@@ -1,13 +1,29 @@
 <%= form_tag properties_path, {:method => :get, :name => :q, :class=> 'custom'} do %>
-  <%= label_tag 'q[type]', 'Property Type' %>
-  <%= select_tag 'q[type_eq]', options_for_select([['All Properties','Property'],['Apartments', 'Apartment'],['Independent Houses', 'IndependentHouse'], ['Villas', 'Villa']]), :id => 'customDropdown' %>
-  <%= label_tag 'q[address_city_eq]', 'City' %>
-  <%= text_field_tag 'q[address_city_eq]' %>
-<!--   <%= label_tag 'q[title_cont]', 'Title' %>
-  <%= text_field_tag 'q[title_cont]' %> -->
- <!--  <%= label_tag 'q[created_at_gteq]', 'Posted From' %>
-  <%= text_field_tag 'q[created_at_gteq]' %>
-  <%= label_tag 'q[created_at_lteq]', 'Posted To' %>
-  <%= text_field_tag 'q[created_at_lteq]' %> -->
-  <%= submit_tag 'Search', :class => 'small button' %>
+	<div class='row'>
+		<div class="large-12 columns">
+			<%= label_tag 'q[type_eq]', 'Property Type' %>
+			<%= select_tag 'q[type_eq]', options_for_select([['All Properties',''],['Apartments', 'Apartment'],['Independent Houses', 'IndependentHouse'], ['Villas', 'Villa']]), :id => 'customDropdown' %>
+		</div>
+	</div>
+	<div class='row'>
+		<div class="large-12 columns">
+			<%= label_tag 'q[address_city_eq]', 'City' %>
+			<%= text_field_tag 'q[address_city_eq]' %>
+		</div>
+	</div>
+	<div class='row'>
+		<div class='large-6 columns'>
+			<%= label_tag 'q[price_gte]', 'Price From' %>
+			<%= text_field_tag 'q[price_gte]' %>
+		</div>
+		<div class='large-6 columns'>
+			<%= label_tag 'q[price_lte]', 'Price To' %>
+			<%= text_field_tag 'q[price_lte]' %>
+		</div>
+	</div>
+	<div class='row'>
+		<div class="large-12 columns">
+      <%= submit_tag 'Search', :class => 'small button' %>
+    </div>
+  </div>
 <% end %>

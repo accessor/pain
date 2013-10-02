@@ -11,7 +11,7 @@ Pain::Application.routes.draw do
   devise_for :users
 
   resources :properties, :controller => :properties, :type => 'Property'
-  resources :resdential, :controller => :properties, :type => 'Resdential'
+  resources :residential, :controller => :properties, :type => 'Residential'
   resources :independent_houses, :controller => :properties, :type => 'IndependentHouse'
   resources :apartments, :controller => :properties, :type => 'Apartment'
   resources :villas, :controller => :properties, :type => 'Villa'

@@ -3,7 +3,7 @@
   <div class='sell-property-link'>
     <%= link_to 'Sell Property', new_independent_house_path if can? :create, Property  %>
   </div>
-  <h3><%= "Listing #{((params[:q] && params[:q][:type_eq])|| params[:type]).underscore.pluralize.titlecase}" %></h3>
+  <h3><%= "Listing #{((params[:q] && params[:q][:type_eq])|| params[:type]).underscore.titlecase} Properties" %></h3>
   <div class='property-list'>
   <%= paginate @properties %>
   <% @properties.each do |property| %>

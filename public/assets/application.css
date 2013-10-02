@@ -11269,6 +11269,10 @@ button:hover, button:focus, .button:hover, .button:focus {
   height: 400px;
   border: #555555 2px solid;
 }
+/* line 4, ../../app/assets/stylesheets/pages.css.scss */
+#banner-fade {
+  padding-top: 25px;
+}
 /* line 6, ../../app/assets/stylesheets/properties.css.scss */
 #property-index .property-list .clr {
   clear: both;

@@ -1,8 +1,10 @@
 ---
-banner1.png: banner1.png
-banner1/index.png: banner1.png
-banner2.jpg: banner2.jpg
-banner2/index.jpg: banner2.jpg
+banner-1.jpg: banner-1.jpg
+banner-1/index.jpg: banner-1.jpg
+banner-2.jpg: banner-2.jpg
+banner-2/index.jpg: banner-2.jpg
+banner-3.jpg: banner-3.jpg
+banner-3/index.jpg: banner-3.jpg
 logo.png: logo.png
 logo/index.png: logo.png
 application.js: application.js

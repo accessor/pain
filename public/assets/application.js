@@ -15558,8 +15558,8 @@ if (typeof jQuery === "undefined" &&
 $(document).foundation();
 jQuery(document).ready(function($) {
     $('#banner-fade').bjqs({
-        'height' : 320,
-        'width' : 620,
+        'height' : 315,
+        'width' : 506,
         'responsive' : true,
         'showcontrols' : false,
         'centercontrols' : false,
