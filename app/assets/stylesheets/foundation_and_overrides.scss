@@ -1042,8 +1042,9 @@
   padding-top:5px;
 }
 
-span > a:hover:not(.button), span > a:focus:not(.button){
+span > a:hover:not(.button), span > a:focus:not(.button), .links li > a:hover:not(.button), .links li > a:focus:not(.button){
   background: none !important;
+  text-decoration : underline;
 }
 
 div > a:hover:not(.button), div > a:focus:not(.button){

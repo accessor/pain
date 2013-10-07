@@ -13,7 +13,7 @@
   	<!-- Set the viewport width to device width for mobile -->
   	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  	<title><%= content_for?(:title) ? yield(:title) : "PropertyAds.in" %></title>
+  	<title><%= content_for?(:title) ? yield(:title) : "PropertyAds" %></title>
 
   	<%= stylesheet_link_tag    "application" %>
   	<%= stylesheet_link_tag "bjqs" %>
@@ -23,9 +23,9 @@
 
   <body>
     <div class='page'>
-		  <div class='header'>
+		  <header class='header'>
 		    <div class='top-links'>
-		      <div class='logo'><%= link_to(image_tag('logo.png', :alt => 'Propertyads.in'), root_path) %></div>
+		      <div class='logo'><%= link_to(image_tag('c_logo.png', :alt => 'Propertyads', :width => "200px", :height => "100px"), root_path) %></div>
 		      <div class='links'>
 		        <span><%= link_to 'About Us', pages_about_us_path %></span>
 		        <span><%= link_to 'Contact Us', pages_contact_us_path %></span>
@@ -104,8 +104,22 @@
 					  </section>
 					</nav>
 				</div>
-		  </div>
+		  </header>
 	    <%= yield %>
+	    <footer class='footer'>
+	      <div class = 'row'>
+	        <div class = '12-large columns'>
+			      <section class='nav-footer'>
+			        <ul class="inline-list links">
+		            <li><a href="#">About Us</a></li>
+							  <li><a href="#">Contact Us</a></li>
+							  <li><a href="#">Help</a></li>
+							  <li><a href="#">Terms of Use</a></li>
+		          </ul>
+			      </section>
+			    </div>
+			  </div>
+	    </footer>
 	  </div>
     <%= javascript_include_tag "application" %>
     <%= javascript_include_tag "bjqs.min" %>

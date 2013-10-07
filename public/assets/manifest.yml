@@ -5,6 +5,8 @@ banner-2.jpg: banner-2.jpg
 banner-2/index.jpg: banner-2.jpg
 banner-3.jpg: banner-3.jpg
 banner-3/index.jpg: banner-3.jpg
+c_logo.png: c_logo.png
+c_logo/index.png: c_logo.png
 logo.png: logo.png
 logo/index.png: logo.png
 no_image.jpg: no_image.jpg

@@ -5584,6 +5584,17 @@ body {
 .error-messages {
   color: red;
 }
+
+/* line 39, ../../app/assets/stylesheets/application.scss */
+.nav-footer {
+  border-top: 1px dotted #cccccc;
+  border-bottom: 1px dotted #cccccc;
+  margin: 15px 0 10px 0;
+}
+/* line 43, ../../app/assets/stylesheets/application.scss */
+.nav-footer ul {
+  padding-top: 15px;
+}
 /* line 4, ../../../../../.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.0.9/scss/foundation/components/_global.scss */
 *,
 *:before,
@@ -11162,26 +11173,27 @@ table tfoot tr td {
 }
 
 /* line 1045, ../../app/assets/stylesheets/foundation_and_overrides.scss */
-span > a:hover:not(.button), span > a:focus:not(.button) {
+span > a:hover:not(.button), span > a:focus:not(.button), .links li > a:hover:not(.button), .links li > a:focus:not(.button) {
   background: none !important;
+  text-decoration: underline;
 }
 
-/* line 1049, ../../app/assets/stylesheets/foundation_and_overrides.scss */
+/* line 1050, ../../app/assets/stylesheets/foundation_and_overrides.scss */
 div > a:hover:not(.button), div > a:focus:not(.button) {
   background: none !important;
 }
 
-/* line 1053, ../../app/assets/stylesheets/foundation_and_overrides.scss */
+/* line 1054, ../../app/assets/stylesheets/foundation_and_overrides.scss */
 p > a:hover:not(.button), p > a:focus:not(.button) {
   background: none !important;
 }
 
-/* line 1057, ../../app/assets/stylesheets/foundation_and_overrides.scss */
+/* line 1058, ../../app/assets/stylesheets/foundation_and_overrides.scss */
 a.button {
   color: #ffffff !important;
 }
 
-/* line 1061, ../../app/assets/stylesheets/foundation_and_overrides.scss */
+/* line 1062, ../../app/assets/stylesheets/foundation_and_overrides.scss */
 .links a {
   color: #222222 !important;
 }
