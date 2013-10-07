@@ -38,7 +38,7 @@
     <%= f.text_field :amenity_list %>
   </div>
   
-  <h3>Address Details</h3>
+  <h5 class='sub-title'>Address Details</h5>
   <%= f.fields_for :address do |address| %>
     <div class="field">
       <%= address.label :name %>
@@ -51,6 +51,10 @@
     <div class="field">
       <%=address.label :city %>
       <%= address.text_field :city%>
+    </div>
+    <div class="filed">
+      <%=address.label :area, 'Area / Landmark' %>
+      <%= address.text_field :area%>
     </div>
     <div class="field">
       <%=address.label :state %>

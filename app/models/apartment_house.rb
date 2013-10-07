@@ -1,0 +1,2 @@
+class ApartmentHouse < Residential
+end

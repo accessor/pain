@@ -1,0 +1,2 @@
+class ResidentialLand < Residential
+end

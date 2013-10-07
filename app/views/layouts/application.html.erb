@@ -60,12 +60,12 @@
 					      <li class="has-dropdown"><a href="#">Residential</a>
 					        <ul class="dropdown">
 					          <!-- <li><label>Dropdown Level 2 Label</label></li> -->
-						        <li class><a href="#">Apartments</a></li>
-							      <li><%= link_to 'Houses', independent_houses_path %></li>
+							      <li><%= link_to 'Independent Houses', independent_houses_path %></li>
+							      <li class><%= link_to 'Apartment Houses', apartment_houses_path %></li>
+							      <li><%= link_to 'Residential Lands', residential_lands_path %></li>
 							      <li><%= link_to 'Villas', villas_path %></li>
-							      <li><%= link_to 'Plots', plots_path %></li>
 							      <li class="divider"></li>
-                                  <li><a href="#">See all &rarr;</a></li>
+                    <li><%= link_to "See all", residential_index_path %></li>
 						      </ul>
 					      </li>
 					      <li class="divider"></li>
@@ -79,7 +79,7 @@
 						      <li><a href="#">Agricultural Land</a></li>
 						      <li><a href="#">Resorts</a></li>
 						      <li class="divider"></li>
-	                          <li><a href="#">See all &rarr;</a></li>
+	                <li><a href="#">See all</a></li>
 						    </ul>
 					      </li>
 					    </ul>
@@ -105,7 +105,9 @@
 					</nav>
 				</div>
 		  </header>
-	    <%= yield %>
+		  <article class='body'>
+	      <%= yield %>
+	    </article>
 	    <footer class='footer'>
 	      <div class = 'row'>
 	        <div class = '12-large columns'>

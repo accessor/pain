@@ -5555,43 +5555,48 @@ body {
 }
 
 /* line 20, ../../app/assets/stylesheets/application.scss */
+article.body {
+  min-height: 500px;
+}
+
+/* line 23, ../../app/assets/stylesheets/application.scss */
 .row {
   max-width: 100% !important;
   padding-left: 10px !important;
 }
 
-/* line 24, ../../app/assets/stylesheets/application.scss */
+/* line 27, ../../app/assets/stylesheets/application.scss */
 .fwb {
   font-weight: bold;
 }
 
-/* line 27, ../../app/assets/stylesheets/application.scss */
+/* line 30, ../../app/assets/stylesheets/application.scss */
 .pb5 {
   padding-bottom: 5px;
 }
 
-/* line 30, ../../app/assets/stylesheets/application.scss */
+/* line 33, ../../app/assets/stylesheets/application.scss */
 .pb10 {
   padding-bottom: 10px;
 }
 
-/* line 33, ../../app/assets/stylesheets/application.scss */
+/* line 36, ../../app/assets/stylesheets/application.scss */
 #error_explanation {
   display: none;
 }
 
-/* line 36, ../../app/assets/stylesheets/application.scss */
+/* line 39, ../../app/assets/stylesheets/application.scss */
 .error-messages {
   color: red;
 }
 
-/* line 39, ../../app/assets/stylesheets/application.scss */
+/* line 42, ../../app/assets/stylesheets/application.scss */
 .nav-footer {
   border-top: 1px dotted #cccccc;
   border-bottom: 1px dotted #cccccc;
   margin: 15px 0 10px 0;
 }
-/* line 43, ../../app/assets/stylesheets/application.scss */
+/* line 46, ../../app/assets/stylesheets/application.scss */
 .nav-footer ul {
   padding-top: 15px;
 }
