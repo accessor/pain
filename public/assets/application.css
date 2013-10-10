@@ -5555,48 +5555,52 @@ body {
 }
 
 /* line 20, ../../app/assets/stylesheets/application.scss */
+.header {
+  margin: 0 auto;
+  max-width: 100%;
+  width: 80%;
+}
+
+/* line 25, ../../app/assets/stylesheets/application.scss */
 article.body {
+  margin: 0 auto;
+  max-width: 100%;
+  width: 83%;
   min-height: 500px;
 }
 
-/* line 23, ../../app/assets/stylesheets/application.scss */
-.row {
-  max-width: 100% !important;
-  padding-left: 10px !important;
-}
-
-/* line 27, ../../app/assets/stylesheets/application.scss */
+/* line 31, ../../app/assets/stylesheets/application.scss */
 .fwb {
   font-weight: bold;
 }
 
-/* line 30, ../../app/assets/stylesheets/application.scss */
+/* line 34, ../../app/assets/stylesheets/application.scss */
 .pb5 {
   padding-bottom: 5px;
 }
 
-/* line 33, ../../app/assets/stylesheets/application.scss */
+/* line 37, ../../app/assets/stylesheets/application.scss */
 .pb10 {
   padding-bottom: 10px;
 }
 
-/* line 36, ../../app/assets/stylesheets/application.scss */
+/* line 40, ../../app/assets/stylesheets/application.scss */
 #error_explanation {
   display: none;
 }
 
-/* line 39, ../../app/assets/stylesheets/application.scss */
+/* line 43, ../../app/assets/stylesheets/application.scss */
 .error-messages {
   color: red;
 }
 
-/* line 42, ../../app/assets/stylesheets/application.scss */
+/* line 46, ../../app/assets/stylesheets/application.scss */
 .nav-footer {
   border-top: 1px dotted #cccccc;
   border-bottom: 1px dotted #cccccc;
   margin: 15px 0 10px 0;
 }
-/* line 46, ../../app/assets/stylesheets/application.scss */
+/* line 50, ../../app/assets/stylesheets/application.scss */
 .nav-footer ul {
   padding-top: 15px;
 }
@@ -11138,23 +11142,23 @@ table tfoot tr td {
   max-width: 800px;
 }
 
-/* line 1014, ../../app/assets/stylesheets/foundation_and_overrides.scss */
-.page {
-  margin: 0 auto;
-  max-width: 100%;
-  width: 80%;
+/* line 1013, ../../app/assets/stylesheets/foundation_and_overrides.scss */
+.row {
+  padding-left: 5px !important;
+  max-width: 100% !important;
+  padding-right: 5px !important;
 }
 
-/* line 1020, ../../app/assets/stylesheets/foundation_and_overrides.scss */
+/* line 1018, ../../app/assets/stylesheets/foundation_and_overrides.scss */
 .top-links {
   min-height: 80px;
   max-width: 100%;
 }
-/* line 1023, ../../app/assets/stylesheets/foundation_and_overrides.scss */
+/* line 1021, ../../app/assets/stylesheets/foundation_and_overrides.scss */
 .top-links .logo {
   float: left;
 }
-/* line 1026, ../../app/assets/stylesheets/foundation_and_overrides.scss */
+/* line 1024, ../../app/assets/stylesheets/foundation_and_overrides.scss */
 .top-links .links {
   padding-top: 10px;
   float: right;
@@ -11162,45 +11166,97 @@ table tfoot tr td {
   font-size: 13px;
   font-weight: bold;
 }
-/* line 1032, ../../app/assets/stylesheets/foundation_and_overrides.scss */
+/* line 1030, ../../app/assets/stylesheets/foundation_and_overrides.scss */
 .top-links .links a:hover {
   text-decoration: underline;
 }
-/* line 1035, ../../app/assets/stylesheets/foundation_and_overrides.scss */
+/* line 1033, ../../app/assets/stylesheets/foundation_and_overrides.scss */
 .top-links .links span {
   padding-left: 10px;
 }
 
-/* line 1040, ../../app/assets/stylesheets/foundation_and_overrides.scss */
+/* line 1038, ../../app/assets/stylesheets/foundation_and_overrides.scss */
 .nav-menu {
   clear: both;
   padding-top: 5px;
 }
 
-/* line 1045, ../../app/assets/stylesheets/foundation_and_overrides.scss */
+/* line 1043, ../../app/assets/stylesheets/foundation_and_overrides.scss */
 span > a:hover:not(.button), span > a:focus:not(.button), .links li > a:hover:not(.button), .links li > a:focus:not(.button) {
   background: none !important;
   text-decoration: underline;
 }
 
-/* line 1050, ../../app/assets/stylesheets/foundation_and_overrides.scss */
+/* line 1048, ../../app/assets/stylesheets/foundation_and_overrides.scss */
 div > a:hover:not(.button), div > a:focus:not(.button) {
   background: none !important;
 }
 
-/* line 1054, ../../app/assets/stylesheets/foundation_and_overrides.scss */
+/* line 1052, ../../app/assets/stylesheets/foundation_and_overrides.scss */
 p > a:hover:not(.button), p > a:focus:not(.button) {
   background: none !important;
 }
 
-/* line 1058, ../../app/assets/stylesheets/foundation_and_overrides.scss */
+/* line 1056, ../../app/assets/stylesheets/foundation_and_overrides.scss */
 a.button {
   color: #ffffff !important;
 }
 
-/* line 1062, ../../app/assets/stylesheets/foundation_and_overrides.scss */
+/* line 1060, ../../app/assets/stylesheets/foundation_and_overrides.scss */
 .links a {
   color: #222222 !important;
+}
+
+/* line 1064, ../../app/assets/stylesheets/foundation_and_overrides.scss */
+.ui-autocomplete {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  float: left;
+  display: none;
+  min-width: 160px;
+  _width: 160px;
+  padding: 4px 0;
+  margin: 2px 0 0 0;
+  list-style: none;
+  background-color: #ffffff;
+  border-color: #ccc;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-style: solid;
+  border-width: 1px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  *border-right-width: 2px;
+  *border-bottom-width: 2px;
+}
+/* line 1093, ../../app/assets/stylesheets/foundation_and_overrides.scss */
+.ui-autocomplete .ui-menu-item > a.ui-corner-all {
+  display: block;
+  padding: 3px 15px;
+  clear: both;
+  font-weight: normal;
+  line-height: 18px;
+  color: #555555;
+  background: none;
+  white-space: nowrap;
+}
+/* line 1103, ../../app/assets/stylesheets/foundation_and_overrides.scss */
+.ui-autocomplete .ui-menu-item > a.ui-corner-all.ui-state-hover, .ui-autocomplete .ui-menu-item > a.ui-corner-all.ui-state-active {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #0088cc;
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  background-image: none;
 }
 
 /*a:hover:not(.button), a:focus:not(.button){
@@ -11342,7 +11398,6 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 /* line 45, ../../app/assets/stylesheets/properties.css.scss */
 #property-index .property-gallery {
-  padding: 6px 10px 0 10px;
   float: left;
 }
 /* line 1, ../../app/assets/stylesheets/scaffolds.css.scss */

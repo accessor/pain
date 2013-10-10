@@ -31,6 +31,8 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'rails3-jquery-autocomplete'
+gem 'jquery-ui-sass-rails'
 gem 'execjs'
 gem 'therubyracer'
 group :production do

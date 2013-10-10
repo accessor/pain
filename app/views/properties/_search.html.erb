@@ -1,29 +1,31 @@
-<%= form_tag properties_path, {:method => :get, :name => :q, :class=> 'custom'} do %>
-	<div class='row'>
-		<div class="large-12 columns">
-			<%= label_tag 'q[type_eq]', 'Property Type' %>
-			<%= select_tag 'q[type_eq]', options_for_select([['All Properties',''],['Apartments', 'Apartment'],['Independent Houses', 'IndependentHouse'], ['Villas', 'Villa']]), :id => 'customDropdown' %>
+<div class='property-search'>
+	<%= form_tag properties_path, {:method => :get, :name => :q, :class=> 'custom'} do %>
+		<div class='row'>
+			<div class="large-12 columns">
+				<%= label_tag 'q[type_eq]', 'Property Type' %>
+				<%= select_tag 'q[type_eq]', options_for_select([['All Properties',''],['Apartments', 'Apartment'],['Independent Houses', 'IndependentHouse'], ['Villas', 'Villa']]), :id => 'customDropdown' %>
+			</div>
 		</div>
-	</div>
-	<div class='row'>
-		<div class="large-12 columns">
-			<%= label_tag 'q[address_city_eq]', 'City' %>
-			<%= text_field_tag 'q[address_city_eq]' %>
+		<div class='row'>
+			<div class="large-12 columns">
+				<%= label_tag 'q[address_city_eq]', 'City' %>
+				<%= text_field_tag 'q[address_city_eq]', nil, :id => 'auto-complete-city' %>
+			</div>
 		</div>
-	</div>
-	<div class='row'>
-		<div class='large-6 columns'>
-			<%= label_tag 'q[price_gteq]', 'Price From' %>
-			<%= text_field_tag 'q[price_gteq]' %>
+		<div class='row'>
+			<div class='large-6 columns'>
+				<%= label_tag 'q[price_gteq]', 'Price From' %>
+				<%= text_field_tag 'q[price_gteq]' %>
+			</div>
+			<div class='large-6 columns'>
+				<%= label_tag 'q[price_lteq]', 'Price To' %>
+				<%= text_field_tag 'q[price_lteq]' %>
+			</div>
 		</div>
-		<div class='large-6 columns'>
-			<%= label_tag 'q[price_lteq]', 'Price To' %>
-			<%= text_field_tag 'q[price_lteq]' %>
-		</div>
-	</div>
-	<div class='row'>
-		<div class="large-12 columns">
-      <%= submit_tag 'Search', :class => 'small button' %>
-    </div>
-  </div>
-<% end %>
+		<div class='row'>
+			<div class="large-12 columns">
+	      <%= submit_tag 'Search', :class => 'small button' %>
+	    </div>
+	  </div>
+	<% end %>
+</div>
