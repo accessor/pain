@@ -1,19 +1,58 @@
-<%= render 'sections' %>
 <div class='row'>
-  <div class='large-2 columns fwb'>Email :</div>
-  <div class='large-3 columns'><%= @user.email %></div>
-  <div class='large-7 columns'></div>
+  <div class="large-12 columns">
+    <div class="sections">
+      <div class='row'>
+        <div class="large-12 columns">
+          <%= render 'sections' %>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='section-data large-12 columns'>
+          <div class='profile-card'>
+            <div class="profile-picture">
+              <%= image_tag (@user.image.present? ? @user.image.image.url(:thumb) : 'no_image.jpg') %>
+            </div>
+            <div class="profile-overview">
+              <div class='username'>Rahul Tapali</div>
+              <div>Gender: Male</div>
+              <div>Address</div>
+              <div>#11, Gangasadan</div>
+              <div>Bangalore, Karntaka, India</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<div class='row'>
-  <div class='large-2 columns fwb'>Last Singed In : </div>
-  <div class='large-3 columns'><%= @user.last_sign_in_at.to_s(:long) %></div>
-  <div class='large-7 columns'></div>
-</div>
-<div class='row'>
-  <div class='large-2 columns'></div>
-  <div class='large-2 columns'></div>
-</div>
-<div class='row'>
-  <div class='large-2 columns'></div>
-  <div class='large-2 columns'></div>
-</div>
+
+<style>
+  .sections{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .section-data{
+    padding-top: 25px;
+    margin-left: 20px;
+  }
+  .profile-card:after{
+    clear: both;
+  }
+  .profile-picture{
+    float: left;
+    padding-right: 20px;
+  }
+  .profile-picture img{
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1), 0 0 0 1px #F4F4F4;
+    vertical-align: middle;
+  }
+  .profile-overview{
+    float: left;
+  }
+  .username{
+    font-weight: bold;
+    font-size: 25px;
+  }
+</style>

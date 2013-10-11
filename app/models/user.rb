@@ -9,7 +9,11 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
   # attr_accessible :title, :body
   has_many :properties
+  has_one :address, as: :addressable
+  has_one :image, as: :imageable
   serialize :roles, Array
+
+  acts_as_taggable_on :iam
   ROLES = %w[admin moderator author banned]
 
   def roles

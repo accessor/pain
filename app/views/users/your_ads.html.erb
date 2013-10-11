@@ -1,24 +1,46 @@
-<%= render 'sections' %>
-<div>
-  <% if @ads.blank? %>
-    <p>You haven't posted ads. Please click here to post an ad</p>
-  <% else %>
-    <table>
-      <tr>
-        <th>Code</th>
-        <th>Title</th>
-        <th>Posted On</th>
-        <th>Status</th>
-        <th></th>
-      </tr>
-      <% @ads.each do |ad| %>
-        <tr>
-          <td><%= ad.code %></td>
-          <td><%= ad.title %></td>
-          <td><%= ad.created_at.to_s(:long) %></td>
-          <td><%= ad.status %></td>
-        </tr>
-      <% end %>
-    </table>
-  <% end %>
+<div class='row'>
+  <div class="large-12 columns">
+    <div class="sections">
+      <div class='row'>
+        <div class="large-12 columns">
+          <%= render 'sections' %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="section-data large-12 columns">
+          <% if @ads.blank? %>
+            <p>You haven't posted ads. Please click here to post an ad</p>
+          <% else %>
+            <table>
+              <tr>
+                <th>Code</th>
+                <th>Title</th>
+                <th>Posted On</th>
+                <th>Status</th>
+                <th></th>
+              </tr>
+              <% @ads.each do |ad| %>
+                <tr>
+                  <td><%= ad.code %></td>
+                  <td><%= ad.title %></td>
+                  <td><%= ad.created_at.to_s(:long) %></td>
+                  <td><%= ad.status %></td>
+                </tr>
+              <% end %>
+            </table>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+<style>
+  .sections{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .section-data{
+    padding-top: 25px;
+    margin-left: 20px;
+  }
+</style>

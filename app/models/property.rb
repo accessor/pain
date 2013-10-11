@@ -1,8 +1,8 @@
 class Property < ActiveRecord::Base
   attr_accessible  :title, :description, :dimensions, :price, :address_attributes, :image_attributes, :amenity_list
   belongs_to :user
-  belongs_to :address, dependent: :destroy
-  belongs_to :image, dependent: :destroy
+  has_one :address, as: :addressable, dependent: :destroy
+  has_one :image, as: :imageable, dependent: :destroy
   accepts_nested_attributes_for :address
   accepts_nested_attributes_for :image
   before_create :assign_user, :generate_code
