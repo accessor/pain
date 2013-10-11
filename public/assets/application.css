@@ -11400,6 +11400,11 @@ button:hover, button:focus, .button:hover, .button:focus {
 #property-index .property-gallery {
   float: left;
 }
+
+/* line 51, ../../app/assets/stylesheets/properties.css.scss */
+.property-search .ui-helper-hidden-accessible {
+  display: none;
+}
 /* line 1, ../../app/assets/stylesheets/scaffolds.css.scss */
 body {
   background-color: #fff;
