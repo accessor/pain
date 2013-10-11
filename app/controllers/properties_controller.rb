@@ -1,7 +1,8 @@
 class PropertiesController < ApplicationController
-  load_and_authorize_resource
-  before_filter :authenticate_user!, :except => [:index]
+  load_and_authorize_resource :except => [:autocomplete_location_city]
+  before_filter :authenticate_user!, :except => [:index, :autocomplete_location_city]
   before_filter :set_current_user
+  autocomplete :location, :city, :full => true
   # GET /properties
   # GET /properties.json
   def index

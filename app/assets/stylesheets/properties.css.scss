@@ -46,3 +46,9 @@
     float : left;
   }
 }
+
+.property-search{
+  .ui-helper-hidden-accessible{
+    display: none;
+  }
+}

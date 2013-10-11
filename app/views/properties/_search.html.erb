@@ -9,7 +9,7 @@
 		<div class='row'>
 			<div class="large-12 columns">
 				<%= label_tag 'q[address_city_eq]', 'City' %>
-				<%= text_field_tag 'q[address_city_eq]', nil, :id => 'auto-complete-city' %>
+				<%= autocomplete_field_tag 'q[address_city_eq]', nil, autocomplete_location_city_properties_path, :min_length => 0 , :id => 'auto-complete-city' %>
 			</div>
 		</div>
 		<div class='row'>
