@@ -11453,10 +11453,33 @@ button:hover, button:focus, .button:hover, .button:focus {
   margin-bottom: 20px;
 }
 
-/* line 93, ../../app/assets/stylesheets/properties.css.scss */
-#listing-new-property .property-address {
+/* line 92, ../../app/assets/stylesheets/properties.css.scss */
+#new-property {
+  border: 1px solid #f4f4f4;
+  border-radius: 10px;
+  margin: 0 auto;
+  width: 90%;
+}
+/* line 97, ../../app/assets/stylesheets/properties.css.scss */
+#new-property .property-section-box {
   border: 10px solid #F4F4F4;
   padding: 10px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 90%;
+}
+/* line 103, ../../app/assets/stylesheets/properties.css.scss */
+#new-property .property-section-box .float-left {
+  float: left;
+}
+/* line 108, ../../app/assets/stylesheets/properties.css.scss */
+#new-property .property-address .marginl-50 {
+  margin-left: 70px;
+}
+/* line 111, ../../app/assets/stylesheets/properties.css.scss */
+#new-property .property-address textarea {
+  width: 650px;
+  height: 100px;
 }
 /* line 1, ../../app/assets/stylesheets/scaffolds.css.scss */
 body {
