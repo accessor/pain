@@ -14,9 +14,9 @@
 				  <b>Price:</b>
 				  <%= @property.price %>
 				</p>
-				<%= gmaps4rails(@gmap_json) %>
-				<%#= gmaps("markers" => {"data" => @gmap_json}, "map_options" => {"auto_zoom" => false, "zoom" => 10}) %>
-				<%= link_to 'Edit', edit_property_path(@property) %> |
+				<%#= gmaps4rails(@gmap_json) %>
+				<%= gmaps("markers" => {"data" => @gmap_json}, "map_options" => {"auto_zoom" => false, "zoom" => 13}) %>
+				<%= link_to 'Edit', eval("edit_#{params[:type].underscore}_path(@property)") %> |
 				<%= link_to 'Back', properties_path %>
     </div>
    </div>

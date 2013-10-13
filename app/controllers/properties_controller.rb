@@ -52,6 +52,7 @@ class PropertiesController < ApplicationController
   # GET /properties/1/edit
   def edit
     @property = property_type.find(params[:id])
+    @property.build_image
   end
 
   # POST /properties
@@ -64,6 +65,7 @@ class PropertiesController < ApplicationController
         format.html { redirect_to @property, notice: 'Property was successfully created.' }
         format.json { render json: @property, status: :created, location: @property }
       else
+        raise @property.errors.full_messages.inspect
         format.html { render action: "new" }
         format.json { render json: @property.errors, status: :unprocessable_entity }
       end

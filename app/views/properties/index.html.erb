@@ -24,7 +24,7 @@
               <dl class='float-left data'>
                 <dt class='code'><%= property.title %></dt>
                 <p><%= truncate property.description, :length => 150 %></p>
-                <dt><%= link_to 'Show Details', property_path(property), :class => 'small button' %></dt>
+                <dt><%= link_to 'Show Details', eval("#{property.type.underscore}_path(property)"), :class => 'small button' %></dt>
               </dl>
             </div>
           </div>
