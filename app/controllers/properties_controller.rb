@@ -34,7 +34,7 @@ class PropertiesController < ApplicationController
   end
 
   def enter_new_property_details
-    redirect_to new_independent_house_path
+    eval("redirect_to new_#{params[:select_property_type].underscore}_path")
   end
 
   # GET /properties/new

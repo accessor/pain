@@ -1,13 +1,12 @@
-<div class='row'>
-  <div class='large=12 columns'>
-    <h3 class='page-title'>New property</h3>
-  </div>
+<div id='new-property'>
+	<div class='row'>
+	  <div class='large-12 columns'>
+	    <h3 class='page-title'>Enter Details of <%= "#{params[:type].titlecase}" %></h3>
+	  </div>
+	</div>
+	<div class='row'>
+	  <div class='large-12 columns'>
+	    <%= render 'form' %>
+	  </div>
+	</div>
 </div>
-
-<div class='row'>
-  <div class='large-6 columns'>
-    <%= render 'form' %>
-  </div>
-</div>
-
-<%= link_to 'Back', properties_path %>

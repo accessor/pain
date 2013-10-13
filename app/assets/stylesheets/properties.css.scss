@@ -88,3 +88,29 @@
     }
   }
 }
+
+#new-property{
+  border: 1px solid #F4F4F4 ;
+  border-radius: 10px;
+  margin: 0 auto;
+  width: 90%;
+  .property-section-box{
+    border: 10px solid #F4F4F4;
+    padding: 10px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 90%;
+    .float-left{
+      float: left;
+    }
+  }
+  .property-address{
+    .marginl-50{
+      margin-left: 70px;
+    }
+    textarea{
+      width:650px;
+      height:100px;
+    }
+  }
+}

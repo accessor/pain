@@ -24,7 +24,7 @@
 	        </p>
 	        <div class='property-type'>
 	          <%= label_tag :select_property_type, 'Choose Property Type' %>
-				    <%= select_tag :select_property_type, options_for_select([['Apartments', 'Apartment'],['Independent Houses', 'IndependentHouse'], ['Villas', 'Villa']]), :id => 'customDropdown' %>
+				    <%= select_tag :select_property_type, options_for_select([['Apartments', 'ApartmentHouse'],['Independent Houses', 'IndependentHouse'], ['Villas', 'Villa']]), :id => 'customDropdown' %>
 	        </div>
 		      <%= submit_tag 'Enter Property Details', :class => 'small button' %>
 	      <% end %>

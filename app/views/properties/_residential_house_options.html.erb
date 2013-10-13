@@ -1,0 +1,12 @@
+<div class="field">
+  <%= f.label :dimensions, 'Buit-up Area' %>
+  <%= f.text_field :dimensions %>
+</div>
+<div class="field">
+  <%= f.label :dimensions_unit, 'Unit' %>
+  <%= f.text_field :dimensions_unit %>
+</div>
+<div class="field">
+  <%= f.label :bedrooms %>
+  <%= f.select :bedrooms, options_for_select(Residential::BEDROOMS.zip(Residential::BEDROOMS)), :class => 'customDropdown' %>
+</div>

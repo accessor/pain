@@ -1112,6 +1112,10 @@ a.button{
 	}
 }
 
+.clearfix{
+  content:"";
+  clear: both;
+}
 
 /*a:hover:not(.button), a:focus:not(.button){
   text-decoration:underline !important;

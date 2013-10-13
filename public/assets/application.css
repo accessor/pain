@@ -11259,6 +11259,12 @@ a.button {
   background-image: none;
 }
 
+/* line 1115, ../../app/assets/stylesheets/foundation_and_overrides.scss */
+.clearfix {
+  content: "";
+  clear: both;
+}
+
 /*a:hover:not(.button), a:focus:not(.button){
   text-decoration:underline !important;
   color: #000000 !important;
@@ -11412,10 +11418,45 @@ button:hover, button:focus, .button:hover, .button:focus {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
+  border: 2px solid #F4F4F4;
+  border-bottom: 5px solid #F4F4F4;
+  margin-bottom: 5px;
 }
-/* line 62, ../../app/assets/stylesheets/properties.css.scss */
+/* line 65, ../../app/assets/stylesheets/properties.css.scss */
+#listing-new-property .listing-banner .list-msg {
+  padding: 0 0 10px 35px;
+}
+/* line 68, ../../app/assets/stylesheets/properties.css.scss */
 #listing-new-property .listing-banner .title {
+  padding: 5px 20px;
   font-style: italic;
+}
+/* line 73, ../../app/assets/stylesheets/properties.css.scss */
+#listing-new-property .single-listing {
+  margin-left: 15px;
+  border: 1px solid #F4F4F4;
+}
+/* line 76, ../../app/assets/stylesheets/properties.css.scss */
+#listing-new-property .single-listing .content {
+  padding: 0 20px;
+}
+/* line 78, ../../app/assets/stylesheets/properties.css.scss */
+#listing-new-property .single-listing .content p {
+  margin-top: 2px;
+  font-size: 0.85em;
+  border-top: 1px solid #F4F6F7;
+}
+/* line 83, ../../app/assets/stylesheets/properties.css.scss */
+#listing-new-property .single-listing .content .property-type {
+  padding: 15px;
+  border: 2px solid #F4F4F4;
+  margin-bottom: 20px;
+}
+
+/* line 93, ../../app/assets/stylesheets/properties.css.scss */
+#listing-new-property .property-address {
+  border: 10px solid #F4F4F4;
+  padding: 10px;
 }
 /* line 1, ../../app/assets/stylesheets/scaffolds.css.scss */
 body {
