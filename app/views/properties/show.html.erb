@@ -1,24 +1,23 @@
 <div class='property-show'>
-<h3><%= @property.title %></h3>
-
-
-<p>
-  <b>Description:</b>
-  <%= @property.description %>
-</p>
-
-<p>
-  <b>Dimensions:</b>
-  <%= @property.dimensions %>
-</p>
-
-<p>
-  <b>Price:</b>
-  <%= @property.price %>
-</p>
-
-<%= gmaps4rails(@gmap_json) %>
-
-
-<%= link_to 'Edit', edit_property_path(@property) %> |
-<%= link_to 'Back', properties_path %>
+  <div class='row'>
+    <div class='large-12 columns'>
+      <h3><%= @property.title %></h3>
+				<p>
+				  <b>Description:</b>
+				  <%= @property.description %>
+				</p>
+				<p>
+				  <b>Dimensions:</b>
+				  <%= @property.dimensions %>
+				</p>
+				<p>
+				  <b>Price:</b>
+				  <%= @property.price %>
+				</p>
+				<%= gmaps4rails(@gmap_json) %>
+				<%#= gmaps("markers" => {"data" => @gmap_json}, "map_options" => {"auto_zoom" => false, "zoom" => 10}) %>
+				<%= link_to 'Edit', edit_property_path(@property) %> |
+				<%= link_to 'Back', properties_path %>
+    </div>
+   </div>
+</div>

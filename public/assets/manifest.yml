@@ -7,6 +7,8 @@ banner-3.jpg: banner-3.jpg
 banner-3/index.jpg: banner-3.jpg
 c_logo.png: c_logo.png
 c_logo/index.png: c_logo.png
+listing-bg-banner.jpg: listing-bg-banner.jpg
+listing-bg-banner/index.jpg: listing-bg-banner.jpg
 logo.png: logo.png
 logo/index.png: logo.png
 no_image.jpg: no_image.jpg

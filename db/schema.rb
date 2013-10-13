@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131011161059) do
+ActiveRecord::Schema.define(:version => 20131012154220) do
 
   create_table "addresses", :force => true do |t|
     t.string   "name"
@@ -63,20 +63,22 @@ ActiveRecord::Schema.define(:version => 20131011161059) do
     t.string   "title"
     t.text     "description"
     t.string   "dimensions"
-    t.datetime "created_at",                                     :null => false
-    t.datetime "updated_at",                                     :null => false
+    t.datetime "created_at",                                            :null => false
+    t.datetime "updated_at",                                            :null => false
     t.string   "status"
     t.datetime "expiry_time"
     t.string   "post_by"
-    t.integer  "address_id"
-    t.integer  "image_id"
     t.integer  "user_id"
     t.string   "dimensions_unit"
     t.text     "additional_details"
-    t.integer  "price_cents",        :limit => 8, :default => 0
+    t.integer  "price_cents",              :limit => 8,  :default => 0
     t.float    "latitude"
     t.float    "longitude"
     t.boolean  "gmaps"
+    t.string   "listing_type",             :limit => 20
+    t.integer  "maintenance_charge_cents", :limit => 8
+    t.integer  "integer",                  :limit => 8
+    t.string   "listing_by",               :limit => 20
   end
 
   add_index "properties", ["price_cents"], :name => "index_properties_on_price_cents"

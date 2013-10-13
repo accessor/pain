@@ -52,3 +52,39 @@
     display: none;
   }
 }
+
+#listing-new-property{
+  .listing-banner{
+    background: url("listing-bg-banner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    border: 2px solid #F4F4F4;
+    border-bottom: 5px solid #F4F4F4;
+    margin-bottom: 5px;
+    .list-msg{
+      padding: 0 0 10px 35px;
+    }
+    .title{
+      padding: 5px 20px;
+      font-style:italic;
+    }
+  }
+  .single-listing{
+    margin-left: 15px;
+    border: 1px solid #F4F4F4;
+    .content{
+      padding: 0 20px;
+      p{
+        margin-top: 2px;
+        font-size: 0.85em;
+        border-top: 1px solid #F4F6F7;
+      }
+      .property-type{
+        padding: 15px;
+        border: 2px solid #F4F4F4;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 class PropertiesController < ApplicationController
-  load_and_authorize_resource :except => [:autocomplete_location_city]
+  #load_and_authorize_resource :except => [:autocomplete_location_city]
   before_filter :authenticate_user!, :except => [:index, :autocomplete_location_city]
   before_filter :set_current_user
   autocomplete :location, :city, :scopes => [:unique_cities], :full => true
@@ -27,6 +27,14 @@ class PropertiesController < ApplicationController
       format.html # show.html.erb
       format.json { render json: @property }
     end
+  end
+
+  def listing_new_property
+
+  end
+
+  def enter_new_property_details
+    redirect_to new_independent_house_path
   end
 
   # GET /properties/new

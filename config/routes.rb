@@ -10,8 +10,10 @@ Pain::Application.routes.draw do
 
   devise_for :users
 
-  resources :properties, :controller => :properties, :type => 'Property' do
+  resources :properties, :controller => :properties, :type => 'Property', only: [:index, :show] do
     get 'autocomplete_location_city', on: :collection
+    get 'listing_new_property', on: :collection
+    post 'enter_new_property_details', on: :collection
   end
   resources :residential, :controller => :properties, :type => 'Residential'
   resources :independent_houses, :controller => :properties, :type => 'IndependentHouse'

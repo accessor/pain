@@ -8,6 +8,7 @@ class Property < ActiveRecord::Base
   before_create :assign_user, :generate_code
   acts_as_taggable_on :amenities
   monetize :price_cents, as: :price
+  monetize :maintenance_charge_cents, as: :maintenance_charge
   private
     def assign_user
       self.user = current_user

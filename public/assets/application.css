@@ -11405,6 +11405,18 @@ button:hover, button:focus, .button:hover, .button:focus {
 .property-search .ui-helper-hidden-accessible {
   display: none;
 }
+
+/* line 57, ../../app/assets/stylesheets/properties.css.scss */
+#listing-new-property .listing-banner {
+  background: url("listing-bg-banner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+/* line 62, ../../app/assets/stylesheets/properties.css.scss */
+#listing-new-property .listing-banner .title {
+  font-style: italic;
+}
 /* line 1, ../../app/assets/stylesheets/scaffolds.css.scss */
 body {
   background-color: #fff;

@@ -1,0 +1,37 @@
+<div id="listing-new-property">
+  <div class='row'>
+    <div class='large-12 columns'>
+      <div class='listing-banner'>
+        <div class='title'>
+          <h3>List your property for FREE!<sup>*</sup></h3>
+        </div>
+        <ul class='list-msg circle'>
+          <li>Free exposure to millions of people searching for homes</li>
+          <li>Real time leads from people interested in your listings</li>
+          <li>Engaging listings with your contact info, unlimited photos, and open homes times</li>
+          <li>Reporting of views, clicks and leads for all your listings</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+	  <div class='large-6 columns single-listing'>
+	    <div class='content'>
+		    <%= form_tag enter_new_property_details_properties_path, :class => 'custom' do %>
+		      <h4>Submit a Listing</h4>
+	        <p>
+	          For sale and rental listings can also be submitted manually. This method is easy and fast - your listing can be live on PropertyAds.in after approving by admin.
+	        </p>
+	        <div class='property-type'>
+	          <%= label_tag :select_property_type, 'Choose Property Type' %>
+				    <%= select_tag :select_property_type, options_for_select([['Apartments', 'Apartment'],['Independent Houses', 'IndependentHouse'], ['Villas', 'Villa']]), :id => 'customDropdown' %>
+	        </div>
+		      <%= submit_tag 'Enter Property Details', :class => 'small button' %>
+	      <% end %>
+	    </div>
+	  </div>
+	  <div class='large-6 columns bulk-listing'>
+	  	
+	  </div>
+  </div>
+</div>
